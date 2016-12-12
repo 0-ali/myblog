@@ -9,47 +9,28 @@
             {% else %}
             {% assign post-thumb = "/images/shutterbug.jpg" %}
             {% endif %}
-            <img src=" {{post-thumb | prepend: site.baseurl }}" alt="building">
+            <img src=" {{post-thumb | prepend: site.baseurl }}" alt="{{post.title}}">
         </a>
     </div>
     <div class="entry-text">
-        <div class="entry-header">
+        <ul class="entry-header">
             <div class="entry-meta">
-                <ul class="entry-meta">
-                    <li>
-                        <i class="fa fa-user" style="color: #0099AE;"></i>
-                        {% if post.author %}
-                        {{post.author}}
-                        {% endif %}
-                    </li>
-                    |
-                    <li>
-                        <i class="fa fa-calendar-o" style="color: #0099AE;"></i>
-                        {{post.date | date: "%B %-d,%Y"}}
-                    </li>
-                    |
-                    <li>
-                        <i class="fa fa-tag" style="color:#0099AE;"></i>
-                        {% if post.tags[0] %}
-                        {% assign tags = post.tags %}
-                        {% for tag in tags %}
-                        <a class="tag"
-                           href="{{site.url | append: site.baseurl | append: '/tags/' | append: tag}}">{{tag}}</a>
-                        {%endfor%}
-                        {% else %}
-                        <a class="tag"
-                           href="{{site.url | append: site.baseurl | append: 'tags/' | append: 'unknown'}}">unknown</a>
-                        {% endif %}
-                    </li>
-                    |
-                    <li>
-                        <i class="fa fa-comments" style="color:#0099AE;"></i>
-                        <a data-disqus-identifier="{{post.id}}">0</a>
-                    </li>
+                <span>
+                    <i class="fa fa-user" style="color: #0099AE;"></i>
+                    {% if post.author %}
+                    {{post.author}}
+                    {% else %}
+                    {{site.author.name}}
+                    {% endif %}
+                </span>
+                |
+                <span>
+                    <i class="fa fa-calendar-o" style="color: #0099AE;"></i>
+                    {{post.date | date: "%B %-d,%Y"}}
+                </span>
             </div>
-
-            <h1 class="entry-title"><a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a></h1>
-        </div>
+        </ul>
+        <h1 class="entry-title"><a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a></h1>
         <div class="entry-excerpt">
             {{post.excerpt}}
         </div>

@@ -16,7 +16,7 @@ layout: default
                         {% else %}
                         {% assign post-thumb = "/images/shutterbug.jpg" %}
                         {% endif %}
-                        <img src="{{post-thumb | prepend: site.baseurl | prepend:'/' | prepend: site.url}}">
+                        <img src="{{post-thumb | prepend: site.baseurl }">
                     </div>
                 </div>
                 <div class="primary-content">
@@ -27,6 +27,8 @@ layout: default
                             <i class="fa fa-user" style="color: #0099AE;"></i>
                             {% if page.author %}
                             {{page.author}}
+                            {% else %}
+                            {{site.author.name}}
                             {% endif %}
                         </li>
                         |
