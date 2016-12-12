@@ -2,4 +2,37 @@
 layout: default
 ---
 
-{{ content }}
+---
+layout: default
+---
+<!-- Main Content -->
+<section id="content-wrap" class="site-page">
+    <div class="row">
+        <div class="col-twelve">
+            <section>
+                <div class="content-media">
+                    {% if page.thumb-img %}
+                    {% assign = post-thumb = page.thumb-img %}
+                    {% else if page.header-img %}
+                    {% assign post-thumb = page.header-img %}
+                    {% else %}
+                    {% assign post-thumb = "/images/shutterbug.jpg" %}
+                    {% endif %}
+                    <img src="{{ post-thumb | prepend: site.baseurl }}">
+                </div>
+                <div class="primary-content">
+                    <h1 class="entry-title add-bottom">
+                        {% if page.title %}
+                        {{ page.title }}
+                        {% else %}
+                        {{ site.title}}
+                        {% endif %}
+                    </h1>
+                    {{ content }}
+                </div>
+            </section>
+        </div> <!-- end col-twelve -->
+    </div> <!-- end row -->
+</section> <!-- end content -->
+
+
