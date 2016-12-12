@@ -1250,7 +1250,7 @@ input::-moz-focus-inner {
 
 .featured-grid,
 .featured-post-slide {
-    height: 600px;
+    height: 200px;
 }
 
 .featured-post-slide {
@@ -1296,6 +1296,14 @@ input::-moz-focus-inner {
     position: relative;
     vertical-align: middle;
     z-index: 500;
+}
+
+.tag {
+    text-transform: capitalize;
+}
+
+.tag:after {
+    content: ",";
 }
 
 .featured-post-slide .entry-meta {
@@ -2419,7 +2427,7 @@ header .logo a {
 }
 
 .bricks-wrapper .featured-grid {
-    width: 50%;
+    width: 100%;
 }
 
 .bricks-wrapper .featured-grid .entry-content {
