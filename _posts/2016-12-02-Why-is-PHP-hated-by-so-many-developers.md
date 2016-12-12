@@ -9,6 +9,8 @@ tags:
 - jekyll
 - pagination
 featured: true
+comments: true
+
 ---
 <p>There are many good reasons to hate PHP, and they run way deeper than some inconsistently named functions with misordered parameters. Learning PHP will actually transform you into a <strong>worse programmer</strong>, and writing in PHP will leave behind a mess that’s a <strong>costly nightmare to maintain</strong> and clean up after. Here are my top four reasons.</p>
 
