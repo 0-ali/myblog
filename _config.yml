@@ -35,7 +35,7 @@ author: # Author of the blog, information
     github: "xc0d3rz"
     email:  "x.c0d3rz000@gmail.com"
 # jekyll-paginate
-paginate: 5 # result no. per page
+paginate: 6 # result no. per page
 # jekyll-paginate-category setting
 category_dir: "categories" # category dir
 category_layout: "category.html" # category layout
