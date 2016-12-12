@@ -1,0 +1,54 @@
+<div class="author-profile">
+    {% if site.author.avatar %}
+    <img src="{{ site.author.avatar | prepend:site.baseurl}}">
+    {% endif %}
+    <div class="about">
+        <h4><a href="#">{{site.author.name}}</a></h4>
+        <p>
+            {{site.author.info}}
+        </p>
+        <ul class="author-social">
+            {% if site.author.social.twitter %}
+            <li>
+                <a href="https://twitter.com/{{ site.author.social.twitter }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                </a>
+            </li>
+            {% endif %}
+            {% if site.author.social.facebook %}
+            <li>
+                <a href="https://www.facebook.com/{{ site.author.social.facebook }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                </a>
+            </li>
+            {% endif %}
+            {% if site.author.social.github %}
+            <li>
+                <a href="https://github.com/{{ site.author.social.github }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                </a>
+            </li>
+            {% endif %}
+            {% if site.author.social.email %}
+            <li>
+                <a href="mailto:{{ site.author.social.email }}">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</div>
+<!-- end author-profile -->
