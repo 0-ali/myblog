@@ -14,14 +14,18 @@ layout: default
                     {% else %}
                     {% assign post-thumb = "/images/shutterbug.jpg" %}
                     {% endif %}
+                    {% if page.media %}
+                    {{page.media}}
+                    {% else %}
                     <img src="{{ post-thumb | prepend: site.baseurl }}">
+                    {% endif %}
                 </div>
                 <div class="primary-content">
                     <h1 class="entry-title add-bottom">
-                        {% if page.title %}
-                        {{ page.title }}
+                        {% if page.description %}
+                        {{ page.description }}
                         {% else %}
-                        {{ site.title}}
+                        {{ page.title}}
                         {% endif %}
                     </h1>
                     {{ content }}
