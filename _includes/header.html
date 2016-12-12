@@ -16,7 +16,7 @@
                         {% for category in site.categories %}
                         {% if category.url != "/category.html" %}
                         <li>
-                            <a href="{{ category[0] | prepend: site.category_dir '/' | prepend:site.baseurl }}"
+                            <a href="{{ category[0] | prepend: site.category_dir | prepend:'/' | prepend:site.baseurl }}"
                                style="text-transform: capitalize;">{{category[0]}}</a>
                         </li>
                         {% endif %}
