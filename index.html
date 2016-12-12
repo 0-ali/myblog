@@ -1,6 +1,49 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
 ---
+<section id="bricks">
+    <div class="row masonry">
+        <!-- brick-wrapper -->
+        <div class="bricks-wrapper">
+            <div class="grid-sizer"></div>
+            <!-- slide -->
+            {% include slide.html %}
+            <!-- posts -->
+            {% include posts.html %}
+        </div>
+    </div>
+    <div class="row">
+        <nav class="pagination">
+            {% if paginator.total_pages > 1 %}
+            {% if paginator.previous_page %}
+            <a class="page-numbers prev"
+               href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+            {% else %}
+            <span class="page-numbers prev inactive">&laquo; Prev</span>
+            {% endif %}
+
+            {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+            <span class="page-numbers current">{{page}}</span>
+            {% elsif page == 1 %}
+            <a class="page-numbers"
+               href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+            {% else %}
+            <a class="page-numbers"
+               href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{
+                page }}</a>
+            {% endif %}
+            {% endfor %}
+
+            {% if paginator.next_page %}
+            <a class="page-numbers next"
+               href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+            {% else %}
+            <span class="page-numbers next inactive">Next &raquo;</span>
+            {% endif %}
+            {% endif %}
+        </nav>
+
+    </div>
+
+</section>
