@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<section id="page-header">
+    <div class="row current-cat">
+        <div class="col-full">
+            <h1>Tag: <span style="text-transform: capitalize;">{{ page.tag }}</span></h1>
+        </div>
+    </div>
+</section>
+<section id="bricks" class="with-top-sep">
+    <div class="row masonry">
+        <!-- brick-wrapper -->
+        <div class="bricks-wrapper">
+            <div class="grid-sizer"></div>
+            {% include posts.html %}
+        </div>
+    </div>
+    <div class="row">
+        <nav class="pagination">
+            {% if paginator.total_pages > 1 %}
+            {% if paginator.previous_page %}
+            <a class="page-numbers prev"
+               href="{{'/tags/' | append:page.tag | append: paginator.previous_page_path  }}">&laquo;
+                Prev</a>
+            {% else %}
+            <span class="page-numbers prev inactive">&laquo; Prev</span>
+            {% endif %}
+            {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+            <span class="page-numbers current">{{page}}</span>
+            {% elsif page == 1 %}
+            <a class="page-numbers"
+               href="{{'/tags/' | append:page.tag | append: paginator.previous_page_path}}">{{
+                page }}</a>
+            {% else %}
+            <a class="page-numbers"
+               href="{{ '/tags/' | append:page.tag | append: paginator.previous_page_path  | replace: ':num', page }}">{{
+                page }}</a>
+            {% endif %}
+            {% endfor %}
+            {% if paginator.next_page %}
+            <a class="page-numbers next"
+               href="{{ '/tags/' | append:page.tag | append: paginator.previous_page_path  }}">Next &raquo;</a>
+            {% else %}
+            <span class="page-numbers next inactive">Next &raquo;</span>
+            {% endif %}
+            {% endif %}
+        </nav>
+    </div>
+
+</section>
