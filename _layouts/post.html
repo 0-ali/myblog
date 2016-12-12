@@ -2,4 +2,92 @@
 layout: default
 ---
 
-{{ content }}
+<!-- Post Content -->
+<section id="content-wrap" class="blog-single">
+    <div class="row">
+        <div class="col-twelve">
+            <article class="format-standard">
+                <div class="content-media">
+                    <div class="post-thumb">
+                        {% if page.thumb-img %}
+                        {% assign = post-thumb = page.thumb-img %}
+                        {% else if page.header-img %}
+                        {% assign post-thumb = page.header-img %}
+                        {% else %}
+                        {% assign post-thumb = "/images/shutterbug.jpg" %}
+                        {% endif %}
+                        <img src="{{post-thumb | prepend: site.baseurl | prepend:'/' | prepend: site.url}}">
+                    </div>
+                </div>
+                <div class="primary-content">
+                    <h1 class="page-title">{{ page.title }}</h1>
+                    <ul class="entry-meta">
+
+                        <li>
+                            <i class="fa fa-user" style="color: #0099AE;"></i>
+                            {% if page.author %}
+                            {{page.author}}
+                            {% endif %}
+                        </li>
+                        |
+                        <li>
+                            <i class="fa fa-calendar-o" style="color: #0099AE;"></i>
+                            {{page.date | date: "%B %-d,%Y"}}
+                        </li>
+                        |
+                        <li>
+                            <i class="fa fa-tag" style="color:#0099AE;"></i>
+                            {% if page.tags[0] %}
+                            {% assign tags = page.tags %}
+                            {% for tag in tags %}
+                            <a class="tag"
+                               href="{{site.url | append: site.baseurl | append: '/tags/' | append: tag}}">{{tag}}</a>
+                            {%endfor%}
+                            {% else %}
+                            <a class="tag"
+                               href="{{site.url | append: site.baseurl | append: 'tags/' | append: 'unknown'}}">unknown</a>
+                            {% endif %}
+                        </li>
+                        |
+                        <li>
+                            <i class="fa fa-comments" style="color:#0099AE;"></i>
+                            <a data-disqus-identifier="{{page.id}}">0</a>
+                        </li>
+                    </ul>
+                    <post>
+                        {{ content }}
+                    </post>
+                    <!-- author -->
+                    {% include author.html %}
+                </div>
+            </article>
+            <div class="row">
+                <nav class="pagination">
+                    {% if page.previous.url %}
+                    <a class="page-numbers prev"
+                       href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+                    {% endif %}
+                    {% if page.next.url %}
+                    <a class="page-numbers prev"
+                       href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+                    {% endif %}
+                </nav>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="comments-wrap">
+        <div id="comments" class="row">
+            <div class="col-full">
+                <a data-disqus-identifier="{{page.id}}"
+                   id="comment-count" style="display: none;">0</a>
+                <h3 class="comment-count"></h3>
+                <!-- commentlist -->
+                <ol class="commentlist" id="disqus_thread">
+                    {% include comments.html %}
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
