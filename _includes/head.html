@@ -1,0 +1,35 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description }}">
+    {% if site.settings.google-site-verification %}
+    <meta name="google-site-verification" content="{{ site.settings.google-site-verification }}"/>
+    {% endif %}
+    <title>
+        {% if page.title %}
+        {{ page.title }} - {{ site.title }}
+        {% else %}{{ site.title }}
+        {% endif %}
+    </title>
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ '/css/base.css' | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ '/css/vendor.css' | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+    <!-- Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+
+    <!-- meta-tag -->
+    {% include meta-tags.html %}
+
+</head>
