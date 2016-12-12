@@ -1,0 +1,55 @@
+<!-- header -->
+<header class="short-header">
+    <div class="gradient-block"></div>
+    <div class="row header-content">
+        <div class="logo">
+            <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
+        </div>
+        <nav id="main-nav-wrap">
+            <ul class="main-navigation sf-menu">
+                <li>
+                    <a href="{{ site.baseurl }}/">Home</a>
+                </li>
+                <li class="has-children">
+                    <a href="#">Categories</a>
+                    <ul class="sub-menu">
+                        {% for category in site.categories %}
+                        {% if category.url != "/category.html" %}
+                        <li>
+                            <a href="/{{site.category_dir | append:site.baseurl | append:'/' | append: category[0] }}"
+                               style="text-transform: capitalize;">{{category[0]}}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </li>
+
+                {% for page in site.pages %}
+                {% if page.title and page.type != "hidden" %}
+                {% if page.children %}
+                <li class="has-children">
+                    {% else %}
+                <li>
+                    {% endif %}
+                    <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                    {% if page.children %}
+                    <ul class="sub-menu">
+                        {% for sub in page.children %}
+                        {% if sub.title %}
+                        <a href="{{ sub.url | prepend: site.baseurl | prepend: page.url}}">{{ sub.title }}</a>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </nav> <!-- end main-nav-wrap -->
+
+        <div class="triggers">
+            <a class="menu-toggle" href="#"><span>Menu</span></a>
+        </div> <!-- end triggers -->
+    </div>
+</header>
+
