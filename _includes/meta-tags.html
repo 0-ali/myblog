@@ -19,7 +19,7 @@
 <meta content="{{ site.description }}" property="og:description">
 {% endif %}
 {% if page.url %}
-<meta content="{{ site.url }}{{ page.url }}" property="og:url">
+<meta content="{{ page.url | prepend: site.baseurl }}" property="og:url">
 {% endif %}
 {% if page.date %}
 <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
@@ -37,7 +37,7 @@
 {% assign post-thumb = "/images/shutterbug.jpg" %}
 {% endif %}
 {% if post-thumb %}
-<meta content="{{ post.thumb | prepend: site.baseurl }}" property="og:image">
+<meta content="{{ post-thumb | prepend: site.baseurl }}" property="og:image">
 {% endif %}
 {% if page.categories %}
 {% for category in page.categories limit:1 %}
@@ -60,7 +60,7 @@
 <meta name="twitter:title" content="{{ site.title }}">
 {% endif %}
 {% if page.url %}
-<meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+<meta name="twitter:url" content="{{ page.url | prepend: site.baseurl }}">
 {% endif %}
 {% if page.description %}
 <meta name="twitter:description" content="{{ page.description }}">
@@ -68,5 +68,5 @@
 <meta name="twitter:description" content="{{ site.description }}">
 {% endif %}
 {% if post-thumb %}
-<meta name="twitter:image:src" content="{{ post.thumb | prepend: site.baseurl }}">
+<meta name="twitter:image:src" content="{{ post-thumb | prepend: site.baseurl }}">
 {% endif %}
