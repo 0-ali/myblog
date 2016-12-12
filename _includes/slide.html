@@ -1,0 +1,65 @@
+<div class="brick entry featured-grid animate-this">
+    <div class="entry-content">
+        <div id="featured-post-slider" class="flexslider">
+            <ul class="slides">
+                {% for post in site.posts %}
+                {% if post.featured == true %}
+                <li>
+                    <div class="featured-post-slide">
+                        {% if post.thumb-img %}
+                        {% assign = post-thumb = post.thumb-img %}
+                        {% else if page.header-img %}
+                        {% assign post-thumb = post.header-img %}
+                        {% else %}
+                        {% assign post-thumb = "/images/shutterbug.jpg" %}
+                        {% endif %}
+                        <div class="post-background"
+                             style="background-image: url({{post-thumb | prepend: site.baseurl }});"></div>
+                        <div class="overlay"></div>
+                        <div class="post-content">
+                            <ul class="entry-meta">
+                                <li>
+                                    <i class="fa fa-user" style="color: #0099AE;"></i>
+                                    {% if post.author %}
+                                    {{post.author}}
+                                    {% endif %}
+                                </li>
+                                |
+                                <li>
+                                    <i class="fa fa-calendar-o" style="color: #0099AE;"></i>
+                                    {{post.date | date: "%B %-d,%Y"}}
+                                </li>
+                                |
+                                <li>
+                                    <i class="fa fa-tag" style="color:#0099AE;"></i>
+                                    {% if post.tags[0] %}
+                                    {% assign tags = post.tags %}
+                                    {% for tag in tags %}
+                                    <a class="tag"
+                                       href="{{site.url | append: site.baseurl | append: '/tags/' | append: tag}}">{{tag}}</a>
+                                    {%endfor%}
+                                    {% else %}
+                                    <a class="tag"
+                                       href="{{site.url | append: site.baseurl | append: 'tags/' | append: 'unknown'}}">unknown</a>
+                                    {% endif %}
+                                </li>
+                                |
+                                <li>
+                                    <i class="fa fa-comments" style="color:#0099AE;"></i>
+                                    <a data-disqus-identifier="{{post.id}}">0</a>
+                                </li>
+                            </ul>
+                            <h1 class="slide-title"><a
+                                    href="{{ post.url | prepend: site.baseurl | prepend:site.url }}">
+                                {{post.title}}
+                            </a>
+                            </h1>
+                        </div>
+                    </div>
+                </li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
