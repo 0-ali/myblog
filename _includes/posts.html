@@ -29,8 +29,8 @@
                     {{post.date | date: "%B %-d,%Y"}}
                 </span>
             </div>
+            <h1 class="entry-title"><a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a></h1>
         </ul>
-        <h1 class="entry-title"><a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a></h1>
         <div class="entry-excerpt">
             {{post.excerpt}}
         </div>
