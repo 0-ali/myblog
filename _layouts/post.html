@@ -17,6 +17,10 @@ layout: default
                         {% assign post-thumb = "/images/shutterbug.jpg" %}
                         {% endif %}
                         <img src="{{post-thumb | prepend: site.baseurl }}">
+                        <!-- ya-share -->
+                        <div class="ya-share2"
+                             data-services="vkontakte,facebook,odnoklassniki,moimir,gplus,twitter,blogger,delicious,digg,reddit,evernote,linkedin,lj,pocket,qzone,renren,sinaWeibo,surfingbird,tencentWeibo,tumblr,viber,whatsapp">
+                        </div>
                     </div>
                 </div>
                 <div class="primary-content">
@@ -77,7 +81,6 @@ layout: default
             </div>
         </div>
     </div>
-    </div>
     <div class="comments-wrap">
         <div id="comments" class="row">
             <div class="col-full">
@@ -92,4 +95,6 @@ layout: default
         </div>
     </div>
 </section>
-
+<!-- ya-share -->
+<script type="text/javascript" src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+<script type="text/javascript" src="https://yastatic.net/share2/share.js" charset="utf-8"></script>
