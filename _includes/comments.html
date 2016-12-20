@@ -1,7 +1,7 @@
 {% if page.comments == true %}
 <script type="text/javascript">
     var disqus_shortname = "{{site.settings.disqus-id}}";
-    var disqus_identifier = "{{page.id}}";
+    var disqus_identifier = "/{{site.baseurl}}/{{page.id}}";
     (function () {
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
