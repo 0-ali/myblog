@@ -9,6 +9,8 @@ featured: true
 comments: true
 ---
 
+Watching a video on Twitter maybe put your PC or phone in a risk
+
 ## Summary
 
 Twitter allows embedding of videos in a tweet via [Twitter Player Cards](https://dev.twitter.com/docs/cards/types/player-card), The case is in playing method of the embedded video, The current playing method is by use a sandbox `iframe`  to play the embedded video(s) even this might protected against [Cross-site scripting (XSS)](https://en.wikipedia.org/wiki/Cross-site_scripting) but still unsafe because it doesn't protected **HTTP Request Sender**  information such as **IP Address, User-Agent ,referer**.
