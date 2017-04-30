@@ -184,7 +184,7 @@ Users use a VPN to avoid IP-Address tracking, a VPN wouldn't prevent the user's 
 2017-02-18 11:01:57 +0000: @xc0d3rz (comment)
 Here I have the request headers log for a request logging service called **"RequesBin"**
 
-{F161812}
+![F161812](https://cdn.rawgit.com/xc0d3rz/xc0d3rz.github.io/e28f515e/img/Screenshot_at_2017-02-18_13_59_43.png)
 
 ---
 
@@ -202,6 +202,4 @@ Thank you for thinking of Twitter security.
 
 ---
 
-2017-04-14 22:10:49 +0000: @xc0d3rz (comment)
-Can disclosure? 
 
