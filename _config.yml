@@ -24,7 +24,7 @@ settings: # Abstract theme settings
   copyrights: "Mohammed Ali & xC0d3rZ"
 author: # Author of the blog, information
   name: "Mohammed Ali" # Author name
-  avatar: "/assets/images/author.jpg" # Author avatar
+  avatar: "/images/author.jpg" # Author avatar
   info: "I'll never give up, I'll not runaway, i'll be strong, I'll stay, I'll make it one day." # Author info
   social: # Social links
     facebook: "eGMwZDNyeg"
