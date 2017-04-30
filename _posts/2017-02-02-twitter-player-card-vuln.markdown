@@ -56,7 +56,7 @@ Here are some sample with a listener in 192.168.1.1:2020:
 #### Step 3: Validating your URL using the Twitter validator tool:
 Once you have added the meta tags and published your page, copy and paste the page URL into the [Twitter Card Validator](https://cards-dev.twitter.com/validator) and then click **Preview Card**.
 
-![F156985](https://raw.githubusercontent.com/xc0d3rz/Abstract-jekyll/3daa8b01/img/Screenshot_at_2017-02-02_23_41_50.png)
+![F156985](https://cdn.rawgit.com/xc0d3rz/Abstract-jekyll/c690ee51/img/Screenshot_at_2017-02-02_23_41_50.png)
 
 ----------
 
@@ -67,7 +67,7 @@ If your domain has not been whitelisted by Twitter, the Player Cards will not ap
 
 Click **Request Approval** to begin the approval process. You will be required to provide additional information about your domain. For more information on the approval process, see the [Twitter documentation](https://dev.twitter.com/cards/types/player/approval).
 
-![F156986](https://raw.githubusercontent.com/xc0d3rz/Abstract-jekyll/3daa8b01/img/Screenshot_at_2017-02-02_23_49_24.png)
+![F156986](https://cdn.rawgit.com/xc0d3rz/Abstract-jekyll/c690ee51/img/Screenshot_at_2017-02-02_23_49_24.png)
 
 
 ----------
@@ -76,7 +76,7 @@ Click **Request Approval** to begin the approval process. You will be required t
 #### Step 5: Share it on twitter:
 When the embedded video is begin played you might received the viewer(s) IP (I suggest to use request logger) .
 
-![F156990](https://raw.githubusercontent.com/xc0d3rz/Abstract-jekyll/3daa8b01/img/Screenshot_at_2017-02-02_23_52_28.png)
+![F156990](https://cdn.rawgit.com/xc0d3rz/Abstract-jekyll/c690ee51/img/Screenshot_at_2017-02-02_23_52_28.png)
 
 
 ### PoC Video
