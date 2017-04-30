@@ -1,6 +1,7 @@
 ---
 layout:     post
-title:      "Twitter Player Cards Vulnerability "	
+title:      "Twitter Player Cards Vulnerability"
+subtitle:   "Watching a video on Twitter maybe put your PC or phone in a risk"
 date:      2017-02-02 21:41:53
 author:     "Mohammed Ali"
 thumb-img: "/img/post-bg-01.jpg"
