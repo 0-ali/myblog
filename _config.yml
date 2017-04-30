@@ -21,7 +21,7 @@ url: "https://xc0d3rz.github.io" # the base hostname & protocol for your site, e
 settings: # Abstract theme settings
   disqus-id: "xc0d3rz" # Disqus user shortname, will be used to enable comments
   google-site-verification: "XXXXXXXXXXXXXXXXX" # Google site verification, will be useful to verify your blog with google webmaster
-  copyrights: "xcod3rz"
+  copyrights: "Mohammed Ali & xC0d3rZ"
 author: # Author of the blog, information
   name: "Mohammed Ali" # Author name
   avatar: "/assets/images/author.jpg" # Author avatar
