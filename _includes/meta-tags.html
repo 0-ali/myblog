@@ -65,12 +65,12 @@
 <meta name="twitter:url" content="{{ page.url | prepend: site.baseurl }}">
 {% endif %}
 {% if page.excerpt %}
-<meta content="{{ page.excerpt | xml_escape }}" property="og:description">
+<meta content="{{ page.excerpt | strip_html }}" property="og:description">
 {% else if page.description %}
 <meta content="{{ page.description }}" property="og:description">
 {% else %}
 <meta content="{{ site.description }}" property="og:description">
 {% endif %}
 {% if post-thumb %}
-<meta name="twitter:image:src" content="{{ post-thumb | prepend: site.baseurl }}">
+<meta name="twitter:image:src" content="{{ post-thumb | prepend: site.baseurl | prepend:site.url }}">
 {% endif %}
