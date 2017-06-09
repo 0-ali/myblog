@@ -14,7 +14,7 @@
 <meta content="website" property="og:type">
 {% endif %}
 {% if page.excerpt %}
-<meta content="{{ page.excerpt | xml_escape }}" property="og:description">
+<meta content="{{ page.excerpt | strip_html }}" property="og:description">
 {% else if page.description %}
 <meta content="{{ page.description }}" property="og:description">
 {% else %}
@@ -39,7 +39,7 @@
 {% assign post-thumb = "/images/shutterbug.jpg" %}
 {% endif %}
 {% if post-thumb %}
-<meta content="{{ post-thumb | prepend: site.baseurl }}" property="og:image">
+<meta content="{{ post-thumb | prepend: site.baseurl | prepend:site.url }}" property="og:image">
 {% endif %}
 {% if page.categories %}
 {% for category in page.categories limit:1 %}
