@@ -20,7 +20,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://xc0d3rz.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 settings: # Abstract theme settings
   disqus-id: "xc0d3rz" # Disqus user shortname, will be used to enable comments
-  google-site-verification: "XXXXXXXXXXXXXXXXX" # Google site verification, will be useful to verify your blog with google webmaster
+  google-site-verification: "UG87rILsmysU3xovBbMDjgNw2g0MsmlMmOegVVMl86I" # Google site verification, will be useful to verify your blog with google webmaster
   copyrights: "Mohammed Ali & xC0d3rZ"
 author: # Author of the blog, information
   name: "Mohammed Ali" # Author name
